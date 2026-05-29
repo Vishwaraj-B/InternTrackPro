@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const uri = 'mongodb+srv://admin123:password12345@cluster0.vrn8bkq.mongodb.net/interntrack?retryWrites=true&w=majority&appName=Cluster0';
-
+const uri = process.env.MONGODB_URI;
 mongoose.connect(uri)
   .then(() => {
     console.log('SUCCESS_DB');
